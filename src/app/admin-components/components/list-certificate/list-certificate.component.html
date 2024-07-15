@@ -1,0 +1,27 @@
+<h1>Certificate List</h1>
+<div class="tab">
+
+<table class="table">
+    <thead>
+      <tr class="tab">
+        <th scope="col">#</th>
+        <th scope="col">Certificate Year</th>
+        <th scope="col">Certificate College</th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.year}}</td>
+        <td>{{item.college}}</td>
+        <td><button (click)="deleteCertificate(item.id)" class="btn btn-danger">delete</button></td>
+        <td><button routerLink="../update-certificate/{{item.id}}" class="btn btn-primary">update</button></td>
+      </tr>
+   
+    </tbody>
+  </table>
+</div>
+  <router-outlet></router-outlet>
+
+

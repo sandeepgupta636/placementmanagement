@@ -1,0 +1,28 @@
+<h1>College List</h1>
+ <div class="tab">
+
+<table class="table">
+    <thead>
+      <tr class="tab">
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Admin</th>
+        <th scope="col">Location</th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.admin}}</td>
+        <td>{{item.location}}</td>
+        <td><button (click)="deleteCollege(item.id)" class="btn btn-danger">delete</button></td>
+        <td><button routerLink="../update-college/{{item.id}}" class="btn btn-primary">update</button></td>
+      </tr>
+   
+    </tbody>
+  </table>
+</div>
+  <router-outlet></router-outlet>
+

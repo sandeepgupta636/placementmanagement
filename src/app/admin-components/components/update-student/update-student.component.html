@@ -1,0 +1,41 @@
+
+<div *ngIf="alert"   class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Success</strong> Your Data Has Been Entered.
+  <button (click)="closeAlert()"   type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+<div class="admin-login">
+  <h1>Update Student</h1>
+<form [formGroup]="editStudent" class="common-form" (ngSubmit)="collectData()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Student Name</label>
+        <input type="email" class="form-control" formControlName="name" placeholder="Enter Student Name">
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Student College</label>
+      <input type="text" class="form-control" formControlName="college" placeholder="Enter Student College">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Student Roll</label>
+        <input type="text" class="form-control" formControlName="roll" placeholder="Enter Student Roll">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Student Qualification</label>
+        <input type="email" class="form-control" formControlName="qualification" placeholder="Enter Student Qualification">
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Student Course</label>
+      <input type="text" class="form-control" formControlName="course" placeholder="Enter Student Course">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Student Year</label>
+        <input type="text" class="form-control" formControlName="year" placeholder="Enter Student Year">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Student Certificate</label>
+        <input type="text" class="form-control" formControlName="certificate" placeholder="Enter Student Certificate">
+      </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+</div>
+  <router-outlet></router-outlet>
+

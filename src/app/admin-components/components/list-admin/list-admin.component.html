@@ -1,0 +1,24 @@
+<h1>Admin List</h1>
+<div class="tab">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">password</th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.password}}</td>
+        <td><button (click)="deleteCustomer(item.id)" class="btn btn-danger" >delete</button></td>
+        <td><button routerLink="../update-admin/{{item.id}}" class="btn btn-primary" >update</button></td>
+      </tr>
+   
+    </tbody>
+  </table>
+</div>
+  <router-outlet></router-outlet>

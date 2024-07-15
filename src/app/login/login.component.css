@@ -1,0 +1,36 @@
+div {
+    width: 30%;
+    border: 10px solid blueviolet;
+    padding: 50px;
+    margin:auto;
+    height: 400px;
+    background-color: rgb(230, 226, 238);
+    
+  }
+  div{
+    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 80px;
+    color: blueviolet;
+  }
+  a {
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    margin:auto;
+    flex-direction: column;
+    width: 150px;
+    color: blueviolet;
+    border: 1px solid blueviolet;
+    text-decoration: none;
+
+  }
+  a:hover{
+    background-color: aquamarine;
+  }
+  div h2{
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    color: blueviolet;
+  }

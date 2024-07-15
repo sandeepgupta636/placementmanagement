@@ -1,0 +1,76 @@
+<div  class="login-admin">
+  <div *ngIf="!showSignup" class="admin-login">
+      <h1>Add Placement</h1>
+<div
+  *ngIf="alert"
+  class="alert alert-success alert-dismissible fade show"
+  role="alert"
+>
+  <strong>Success</strong> Your Data Has Been Entered.
+  <button
+    (click)="closeAlert()"
+    type="button"
+    class="btn-close"
+    data-bs-dismiss="alert"
+    aria-label="Close"
+  ></button>
+</div>
+<form  [formGroup]="addPlacement" class="common-form" (ngSubmit)="CollectPlacement()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Placement Name</label>
+    <input
+      type="email"
+      class="form-control"
+      formControlName="name"
+      placeholder="Enter Name"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Placement College</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="college"
+      placeholder="Enter Placement College "
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Placement date</label>
+    <input
+      type="date"
+      class="form-control"
+      formControlName="date"
+      placeholder="Enter Placement date "
+    />
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Placement Qualification</label
+    >
+    <input
+      type="text"
+      class="form-control"
+      formControlName="qualification"
+      placeholder="Enter Placement Qualification"
+    />
+  </div>
+  <!-- <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Placement Year</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="year"
+      placeholder="EnterPlacement Year"
+    />
+  </div> -->
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+  <button class="auth-toggle-link" (click)="openSignUp()">placement List</button>
+</form>
+</div>
+
+<!-- list of placement -->
+<div *ngIf="showSignup">
+  <app-list-admin></app-list-admin>
+  <button class="btn btn-primary" (click)="openLogin()">Add placement</button>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,31 @@
+<div  class="login-admin">
+  <div *ngIf="!showSignup" class="admin-login">
+      <h1>Add Certificate</h1>
+
+<div *ngIf="alert"   class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success</strong> Your Data Has Been Entered.
+    <button (click)="closeAlert()"   type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>
+<form *ngIf="!showSignup" [formGroup]="addCertificate" class="common-form"(ngSubmit)="CollectCertificate()">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Certificate Year</label>
+        <input type="text" class="form-control" formControlName="year" placeholder="Enter Certigicate Year">
+      </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">certificate College </label>
+      <input type="text" class="form-control" formControlName="college" placeholder="Enter certificate College ">
+    </div>
+  
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button class="auth-toggle-link" (click)="openSignUp()">Certificate List</button>
+  </form>
+  </div>
+
+  <!-- list of certificate -->
+  <div *ngIf="showSignup">
+    <app-list-certificate></app-list-certificate>
+    <button class="btn btn-primary" (click)="openLogin()">Add Certificate</button>
+  </div>
+  <router-outlet></router-outlet>
+
+

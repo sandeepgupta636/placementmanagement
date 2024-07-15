@@ -1,0 +1,39 @@
+<div  class="login-user">
+    <div *ngIf="showSignup" class="user-signup">
+        <h1>User Sign-Up</h1>
+<form [formGroup]="userSignUp" class="common-form" (ngSubmit)="SignUp()">
+    <div class="mb-3">
+        <label  class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" formControlName="name" placeholder="Enter Name">
+      </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" formControlName="password" placeholder="Enter password">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">User Type</label>
+        <input type="password" class="form-control" name="type" formControlName="type" placeholder="Enter User Type">
+      </div>
+    <button class="form-button">Admin Login</button>
+    <a class="auth-toggle-link" (click)="openLogin()">Already Have Account? Click to Login</a>
+   </form> 
+   </div>
+
+  <!-- User Login -->
+   <div *ngIf="!showSignup" class="user-login">
+    <h1>User Login</h1>
+   <form [formGroup]="userLogin" class="common-form" (ngSubmit)="login()">
+    <div class="mb-3">
+        <label  class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" formControlName="name" placeholder="Enter Name">
+      </div>
+    <div class="mb-3">
+      <label class="form-label">Password</label>
+      <input type="password" class="form-control" name="password" formControlName="password" placeholder="Enter password">
+    </div>
+    <button class="form-button">Admin Login</button>
+    <a class="auth-toggle-link" (click)="openSignUp()">I don't Have Account? Click to SignUp</a>
+   </form> 
+
+</div>
+</div>

@@ -1,0 +1,33 @@
+<h1>Placement List</h1>
+<div class="tab">
+
+<table class="table">
+    <thead>
+      <tr class="tab">
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">College</th>
+        <th scope="col">Date</th>
+        <th scope="col">Qualification</th>
+        <th scope="col">Year</th>
+        <th scope="col">Operations</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of collection">
+        <th scope="row">{{item.id}}</th>
+        <td>{{item.name}}</td>
+        <td>{{item.college}}</td>
+        <td>{{item.date}}</td>
+        <td>{{item.qualification}}</td>
+        <td>{{item.year}}</td>
+        <td><button (click)="deletePlacement(item.id)" class="btn btn-danger">delete</button></td>
+        <td><button routerLink="../update-placement/{{item.id}}" class="btn btn-primary">update</button></td>
+      </tr>
+   
+    </tbody>
+  </table>
+</div>
+  <router-outlet></router-outlet>
+
+
