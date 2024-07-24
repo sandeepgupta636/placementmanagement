@@ -39,7 +39,7 @@ export class LoginAdminComponent implements OnInit{
       password:[]
     })
   }
-  
+  //signup
   signUp():void{
     this.placement.signUp(this.adminSignup.value).subscribe((result)=>{
       if(result){
@@ -50,10 +50,40 @@ export class LoginAdminComponent implements OnInit{
     alert("signup success")
   }
   
+//login
+  login(): void {
+    if (this.adminLogin.valid) {
+      const credentials = this.adminLogin.value;
+      this.placement.login(credentials).subscribe({
+        next: () => {
+          console.log('Login successful');
+          if (this.placement.isLoggedIn()) {
+            this.route.navigate(['/dashboard']);
+          } else {
+            this.errorMessage = 'Invalid credentials or another user is already logged in.';
+          }
+        },
+        error: (err) => {
+          this.errorMessage = 'Login failed';
+          console.error('Login error', err);
+        }
+      });
+    }
+  }
 
+  openSignUp(){ //  redirect to Admin-Signup Page 
+    this.showSignup=true
+  }
+  openLogin(){  // redirect to Admin-Login Page
+    this.showSignup=false
 
+  }
+  closeAlert(){  //to close alert message
+    this.alert=false
+   }
+   
 
-  // login(){
+   // login(){
   //   this.http.get<any>("http://localhost:3000/admin").subscribe(res=>{
   //     const admin= res.find((a:any)=>{
   //       return a.name===this.adminLogin.value.name && a.password ===this.adminLogin.value.password
@@ -94,35 +124,4 @@ export class LoginAdminComponent implements OnInit{
   //     );
   //   }
   // }
-
-  login(): void {
-    if (this.adminLogin.valid) {
-      const credentials = this.adminLogin.value;
-      this.placement.login(credentials).subscribe({
-        next: () => {
-          console.log('Login successful');
-          if (this.placement.isLoggedIn()) {
-            this.route.navigate(['/dashboard']);
-          } else {
-            this.errorMessage = 'Invalid credentials or another user is already logged in.';
-          }
-        },
-        error: (err) => {
-          this.errorMessage = 'Login failed';
-          console.error('Login error', err);
-        }
-      });
-    }
-  }
-
-  openSignUp(){ //  redirect to Admin-Signup Page 
-    this.showSignup=true
-  }
-  openLogin(){  // redirect to Admin-Login Page
-    this.showSignup=false
-
-  }
-  closeAlert(){  //to close alert message
-    this.alert=false
-   }
   }

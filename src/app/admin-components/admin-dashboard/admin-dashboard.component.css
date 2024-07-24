@@ -1,0 +1,253 @@
+/* Dropdown Button */
+/* .dropbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 20%;
+  }
+  .dropbtn-1 {
+    background-color: #b4528bbe;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 20%;
+  }
+  .dropbtn-2 {
+    background-color: #d1b411;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 20%;
+  }
+  .dropbtn-3 {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 20%;
+  }
+  .dropbtn-4 {
+    background-color: #e76c6c;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 20%;
+  }
+  .dropbtn-5 {
+    background-color: rgba(112, 111, 111, 0.705);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border-radius: 20%;
+  } */
+/* The container <div> - needed to position the dropdown content */
+/* .dropdown {
+    position: relative;
+    display: inline-block;
+  } */
+
+/* Dropdown Content (Hidden by Default) */
+/* .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+   */
+/* Links inside the dropdown */
+/* .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  } */
+
+/* Change color of dropdown links on hover
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  /* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {display: block;} */
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {background-color: #3e8e41;}
+  .login-admin{
+    text-align: center;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    color: blueviolet;
+} */
+
+@import "~@fortawesome/fontawesome-free/css/all.css";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.sidebar {
+  position: fixed;
+  width: 30;
+  height: 100%;
+  background: #333;
+  padding: 20px;
+  color: white;
+  transition: width 0.3s;
+  overflow: hidden;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-bottom: 15px;
+}
+
+.nav-links button {
+  width: 100%;
+
+  text-decoration: none;
+  background: #333;
+  color: white;
+}
+.nav-links button:hover {
+  background-color: #000080;
+  color: white;
+}
+
+/*new css*/
+
+@import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
+
+body {
+  background: white;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 100px;
+}
+/* Left Menu */
+.left {
+  width: 55px;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: inherit;
+  z-index: 1;
+  background: #333;
+  position: fixed;
+  transition: all 0.5s;
+  font-weight: bold;
+}
+.left:hover {
+  width: 230px;
+}
+.left:hover ul li.menu-heading {
+  opacity: 1;
+  text-align: center;
+}
+.left ul {
+  padding-left: 0;
+}
+.left ul li {
+  list-style-type: none;
+}
+
+.left ul li a {
+  display: flex;
+  align-items: center;
+  background: rgb(9, 179, 236);
+  color: white;
+  padding: 15px 10px;
+  font-size: 13px;
+  width: 230px;
+  /*border-bottom: 1px solid #2b3443;*/
+}
+.left ul li a:hover {
+  background: rgb(51, 194, 241);
+  text-decoration: none;
+}
+.left ul li a:hover i.fa-solid {
+  color: #ffff04;
+}
+
+.left ul li a:focus {
+  text-decoration: none;
+}
+.left ul li a i.fa-solid {
+  width: 50px;
+  text-align: center;
+  padding-right: 15px;
+  transition: all 1s;
+}
+.left ul .menu-heading {
+  opacity: 0;
+  padding: 10px 5px 10px 10px;
+  color: #ffff04;
+  font-size: larger;
+  border-bottom: 1px solid rgb(9, 179, 236);
+  transition: all 0.5s;
+  font-weight: bolder;
+}
+
+/* #mainNav.fixed-top .sidenav-toggler {
+  display: none;
+}
+@media (min-width: 992px) {
+  #mainNav.fixed-top .navbar-sidenav {
+    height: calc(100vh - 111px);
+  }
+  #mainNav.fixed-top .sidenav-toggler {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-top: calc(100vh - 49px);
+  }
+} */
+
+/* flèches menu gauche*/
+#fa1 {
+  margin-left: 52px !important;
+}
+
+#fa2 {
+  margin-left: 32px !important;
+}
+
+#fa3 {
+  margin-left: 40px !important;
+}
+
+.right #overview .content {
+  padding: 100px 30px 15px 30px;
+}
+
+.left:hover + .right {
+  margin-left: 17%;
+}
+
+.left ul {
+  list-style-type: none;
+  padding: 0;
+}
+.left li a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.left li a i {
+  margin-right: 10px;
+}
+.left li a:hover {
+  background-color: #f0f0f0;
+}

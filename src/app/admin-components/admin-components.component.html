@@ -1,42 +1,11 @@
-<!-- 
-<div class="login-admin">
-  <h1>Welcome Admin</h1>
-  <div class="dropdown">
-    <button routerLink="add-admin" class="dropbtn-1">Admin</button>
+<app-header></app-header
+><!-- sidebar -->
+<div>
+  <div class="left">
+    <app-admin-dashboard></app-admin-dashboard>
+    <!-- dashoard -->
   </div>
-
-  <div class="dropdown">
-    <button routerLink="add-placement" class="dropbtn-2">Placement</button>
+  <div class="right">
+    <router-outlet></router-outlet>
   </div>
-
-  <div class="dropdown">
-    <button routerLink="add-student" class="dropbtn-3">Student</button>
-  </div>
-
-  <div class="dropdown">
-    <button routerLink="add-college" class="dropbtn-4">college</button>
-  </div>
-
-  <div class="dropdown">
-    <button routerLink="add-certificate" class="dropbtn-5">certicate</button>
-  </div>
-
-  <div class="dropdown">
-    <button routerLink="add-user" class="dropbtn">User</button>
-  </div>
-</div> -->
-
-<nav class="sidebar">
-  <ul class="nav-links">
-    <li><button>DashBoard</button></li>
-      <li><button  routerLink="add-admin">Admin</button></li>
-      <li><button routerLink="add-student">Student</button></li>
-      <li><button routerLink="add-college">college</button></li>
-      <li><button routerLink="add-certificate">certicate</button></li>
-      <li><button routerLink="add-user">User</button></li>
-      <li><button routerLink="add-placement">Placement</button></li>
-  </ul>
-</nav>
-
-<router-outlet></router-outlet>
-
+</div>

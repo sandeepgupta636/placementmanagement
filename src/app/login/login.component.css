@@ -1,36 +1,81 @@
-div {
-    width: 30%;
-    border: 10px solid blueviolet;
-    padding: 50px;
-    margin:auto;
-    height: 400px;
-    background-color: rgb(230, 226, 238);
-    
-  }
-  div{
-    text-align: center;
-    margin-bottom: 50px;
-    margin-top: 80px;
-    color: blueviolet;
-  }
-  a {
-    font-weight: bold;
-    text-align: center;
-    display: flex;
-    margin:auto;
-    flex-direction: column;
-    width: 150px;
-    color: blueviolet;
-    border: 1px solid blueviolet;
-    text-decoration: none;
+@import "~@fortawesome/fontawesome-free/css/all.css";
 
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-image: url("../../assets/background.webp");
+  background-size: cover;
+  background-position: center;
+}
+.container {
+  width: 100%;
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-container {
+  width: 30%;
+  border: 1px solid blueviolet;
+  border-radius: 20px;
+  padding: 50px;
+  background-color: rgba(230, 226, 238, 0.8);
+  text-align: center;
+  color: blueviolet;
+  position: relative;
+}
+
+.login-container h2 {
+  font-family: "Times New Roman", Times, serif;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: blueviolet;
+}
+
+a {
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 150px;
+  color: blueviolet;
+  border: 1px solid blueviolet;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: rgba(55, 65, 61, 0.815);
+  color: beige;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .login-container {
+    width: 50%;
+    padding: 30px;
   }
-  a:hover{
-    background-color: aquamarine;
+
+  a {
+    width: 100px;
+    margin: 10px auto;
   }
-  div h2{
-    font-family: 'Times New Roman', Times, serif;
-    margin-top: 20px;
-    margin-bottom: 50px;
-    color: blueviolet;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    width: 80%;
+    padding: 20px;
   }
+
+  a {
+    width: 80px;
+    margin: 10px auto;
+  }
+}

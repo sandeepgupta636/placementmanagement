@@ -1,0 +1,23 @@
+.nav-link {
+  color: blanchedalmond;
+}
+.navbar {
+  width: 100%;
+}
+.btn-danger {
+  margin-left: 54rem;
+}
+.btn-danger:hover {
+  background-color: white;
+  color: black;
+}
+li,
+a:hover {
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    width: 100%;
+  }
+}

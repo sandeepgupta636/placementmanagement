@@ -22,8 +22,9 @@ import { UpdatePlacementComponent } from './components/update-placement/update-p
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { ListUserComponent } from './components/list-user/list-user.component';
 import { UpdateUserComponent } from './components/update-user/update-user.component';
-
-
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -46,14 +47,11 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
     AddUserComponent,
     ListUserComponent,
     UpdateUserComponent,
-   
+    DashboardComponent,
+    AdminDashboardComponent,
+    HeaderComponent,
   ],
-  imports: [
-    CommonModule,
-    AdminComponentsRoutingModule,
-    ReactiveFormsModule
-  ],
-  exports:[AdminComponentsComponent,
-  AddPlacementComponent]
+  imports: [CommonModule, AdminComponentsRoutingModule, ReactiveFormsModule],
+  exports: [AdminComponentsComponent, AddPlacementComponent, HeaderComponent],
 })
-export class AdminComponentsModule { }
+export class AdminComponentsModule {}

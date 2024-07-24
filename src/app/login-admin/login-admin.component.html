@@ -1,6 +1,6 @@
 <!-- Admin Login Form -->
 
-<div  class="login-admin">
+<!-- <div  class="login-admin">
     <div *ngIf="!showSignup" class="admin-login">
         <h1>Admin Login</h1>
        <form [formGroup]="adminLogin" class="common-form" (ngSubmit)="login()">
@@ -18,7 +18,7 @@
     
     </div>
 
-    <!-- Admin Sign-up Form -->
+    
 <div *ngIf="showSignup" class="admin-signup">
     <h1>Sign-Up</h1>
    <form [formGroup]="adminSignup" class="common-form" (ngSubmit)="signUp()">
@@ -37,4 +37,59 @@
 
 </div>
 
+</div> -->
+
+<div *ngIf="!showSignup" class="container">
+  <div class="sign-in-section">
+    <h1>Sign In</h1>
+    <div class="social-buttons">
+      <button class="google-btn"><i class="fab fa-google"></i> </button>
+      <button class="facebook-btn"><i class="fab fa-facebook"></i></button>
+      <button class="linkedin-btn"><i class="fab fa-linkedin"></i> </button>
+      
+    </div>
+    <div class="or-separator">
+      <span>or use your email password</span>
+    </div>
+    <form [formGroup]="adminLogin" class="common-form" (ngSubmit)="login()">
+      <input type="text" class="form-control" name="name" formControlName="name" placeholder="Enter Name">
+      <input type="password" class="form-control" name="password" formControlName="password" placeholder="Enter password">
+      <button type="submit" class="sign-in-btn">Admin Login</button>
+      <!-- <a href="#" class="forgot-password">Forget Your Password?</a> -->
+    </form>
+  </div>
+
+  <div class="welcome-section">
+    <h2>Hello, Friend!</h2>
+    <p>Register with your personal details to use all of site features</p>
+    <button class="sign-up-btn"  (click)="openSignUp()">SIGN UP</button>
+  </div>
+</div>
+
+
+<!--signup form-->
+
+<div    *ngIf="showSignup" class="container">
+  
+  <div class="welcome-section">
+      <h2>Hello, Friend!</h2>
+      <p>Register with your personal details to use all of site features</p>
+      <button class="sign-in-btn" (click)="openLogin()">SIGN IN</button>
+  </div>
+  
+  <div class="create-account-card">
+    <div class="create-account-title">Create Account</div>
+    
+    <div class="social-buttons">
+      <button class="google-btn"><i class="fab fa-google"></i> </button>
+      <button class="facebook-btn"><i class="fab fa-facebook"></i></button>
+      <button class="linkedin-btn"><i class="fab fa-linkedin"></i> </button>
+    </div>
+    <form [formGroup]="adminSignup" class="common-form" (ngSubmit)="signUp()">
+      <input type="text" class="form-control" name="name" formControlName="name" placeholder="Enter Name">
+      <input type="password" class="form-control" name="password" formControlName="password" placeholder="Enter password">
+      <button class="signs-up-btn">SIGN UP</button>
+    </form>
+    
+  </div>
 </div>

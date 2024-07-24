@@ -16,6 +16,7 @@ import { UpdatePlacementComponent } from './components/update-placement/update-p
 import { AddCertificateComponent } from './components/add-certificate/add-certificate.component';
 import { ListCertificateComponent } from './components/list-certificate/list-certificate.component';
 import { UpdateCertificateComponent } from './components/update-certificate/update-certificate.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 const routes: Routes = [
   {
@@ -105,8 +106,13 @@ const routes: Routes = [
         path: 'update-certificate/:id',
         component: UpdateCertificateComponent
       },
+      {
+        path:'dash-board',
+        component:DashboardComponent
+      }
     ],
   },
+  
 ];
 
 @NgModule({
